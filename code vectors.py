@@ -40,12 +40,15 @@ for rv in rvs:
     print(ans)
 
 '''
-INPUT
+INPUT: (No. of columns, No. of rows, Linear Block Code)
 6
 3
 1 0 0 1 1 0
 0 1 0 1 1 1
 0 0 1 0 0 1
+
+
+INTERNAL CALCULATION:
 
 GENERATOR MATRIX (G)
 [[1, 0, 0, 1, 1, 0],
@@ -62,7 +65,8 @@ Binary Row Vectors
 [1, 1, 0]
 [1, 1, 1]
 
-ANSWER (CODE VECTORS)
+
+OUTPUT (CODE VECTORS)
 [0, 0, 0, 0, 0, 0]
 [0, 0, 1, 0, 0, 1]
 [0, 1, 0, 1, 1, 1]
