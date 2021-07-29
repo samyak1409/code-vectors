@@ -1,4 +1,4 @@
-# To find out the code vectors(words) of LBC(n, r) using the generator matrix G.
+# To find out the code vectors (words) of LBC(n, r) using the generator matrix G.
 
 from numpy import dot
 
@@ -66,7 +66,7 @@ Binary Row Vectors
 [1, 1, 1]
 
 
-OUTPUT (CODE VECTORS)
+OUTPUT: (Code Vectors)
 [0, 0, 0, 0, 0, 0]
 [0, 0, 1, 0, 0, 1]
 [0, 1, 0, 1, 1, 1]
