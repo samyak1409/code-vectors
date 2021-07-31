@@ -12,11 +12,11 @@ G = [[int(i) for i in input('>').split()] for row in range(r)]  # matrix
 
 # CALCULATION->
 outer = 1
-inner = 2 ** r  # binary = [0, 1]; len(binary) = 2
+inner = 2**r  # binary = [0, 1]; len(binary) = 2
 rvs = []  # binary row-vectors
 for row in range(r):
-    outer = outer * 2
-    inner = inner // 2
+    outer *= 2
+    inner //= 2
     num = 0
     for o in range(outer):
         for i in range(inner):
