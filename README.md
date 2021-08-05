@@ -5,14 +5,14 @@ While studying for [Information Theory and Coding](https://en.wikipedia.org/wiki
 
 ## I/O Format
 
-### INPUT: (No. of columns, No. of rows, Linear Block Code)
-6 <br />
-3 <br />
+#### INPUT: (No. of columns, No. of rows, Linear Block Code)
+No. of Rows: 6 <br />
+Matrix: <br />
 1 0 0 1 1 0 <br />
 0 1 0 1 1 1 <br />
 0 0 1 0 0 1 <br />
 
-### OUTPUT: (Code Vectors)
+#### OUTPUT: (Code Vectors)
 [0, 0, 0, 0, 0, 0] <br />
 [0, 0, 1, 0, 0, 1] <br />
 [0, 1, 0, 1, 1, 1] <br />
@@ -21,3 +21,8 @@ While studying for [Information Theory and Coding](https://en.wikipedia.org/wiki
 [1, 0, 1, 1, 1, 1] <br />
 [1, 1, 0, 0, 0, 1] <br />
 [1, 1, 1, 0, 0, 0] <br />
+
+
+## Screenshot
+
+<img src="Screenshot.png">

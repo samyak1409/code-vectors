@@ -1,16 +1,18 @@
-# To find out the code vectors (words) of LBC(n, r) using the generator matrix G.
+# Program to find out the code vectors (words) of LBC(n, r) using the Generator matrix G.
 
 from numpy import dot
 
-# INPUT->
-n = int(input('n: '))  # columns
-r = int(input('r: '))  # rows
-G = [[int(i) for i in input('>').split()] for row in range(r)]  # matrix
+# INPUT
+print()
+r = int(input('No. of Rows: '))
+print('Matrix: ')
+G = [list(map(int, input().split())) for row in range(r)]
+'''
+for row in G:
+    print(row)  # debugging
+'''
 
-'''for row in G:
-    print(row)  # debugging'''
-
-# CALCULATION->
+# CALCULATION
 outer = 1
 inner = 2**r  # binary = [0, 1]; len(binary) = 2
 rvs = []  # binary row-vectors
@@ -27,30 +29,33 @@ for row in range(r):
                 globals()['v' + str(num)] = []
                 globals()['v' + str(num)].append(o % 2)
                 rvs.append(globals()['v' + str(num)])
+'''
+for rv in rvs:
+    print(rv)  # debugging
+'''
 
-'''for rv in rvs:
-    print(rv)  # debugging'''
-
-# OUTPUT->
-print('\n')
+# OUTPUT
+print()
 for rv in rvs:
     ans = list()
     for i in dot(rv, G):  # dot() -> for matrix multiplication
         ans.append(i % 2)
     print(ans)
 
-'''
-INPUT: (No. of columns, No. of rows, Linear Block Code)
-6
-3
+
+"""
+INPUT: (No. of rows, Linear Block Code)
+
+No. of Rows: 3
+Matrix: 
 1 0 0 1 1 0
 0 1 0 1 1 1
 0 0 1 0 0 1
 
 
-INTERNAL CALCULATION:
+CALCULATION:
 
-GENERATOR MATRIX (G)
+Generator Matrix (G)
 [[1, 0, 0, 1, 1, 0],
 [0, 1, 0, 1, 1, 1],
 [0, 0, 1, 0, 0, 1]]
@@ -67,6 +72,7 @@ Binary Row Vectors
 
 
 OUTPUT: (Code Vectors)
+
 [0, 0, 0, 0, 0, 0]
 [0, 0, 1, 0, 0, 1]
 [0, 1, 0, 1, 1, 1]
@@ -75,4 +81,4 @@ OUTPUT: (Code Vectors)
 [1, 0, 1, 1, 1, 1]
 [1, 1, 0, 0, 0, 1]
 [1, 1, 1, 0, 0, 0]
-'''
+"""
